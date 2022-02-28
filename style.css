@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Century Gothic'
+}
+
+body {
+    background-image: url('/assets/background.jpg');
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.nav-bar {
+    padding: 1%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.nav-item {
+    display: inline;
+    padding-inline: 10px;
+}
+
+#nav-text {
+    position: relative;
+    text-decoration: none;
+    bottom: 4vh;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+#fa {
+    color: #7289da;
+    transition: 0.08s ease-in-out;
+}
+#fa:hover {
+    color: #3b5edf
+}
+
+.fa-dot {
+    font-size: xx-small;
+    position: relative;
+    bottom: 4px;
+}
+
+#fa-offline, #offline {
+    animation: blink-status 1s infinite;
+    color: #ff5555;
+}
+
+#offline::after {
+    content: 'Offline';
+}
+
+#fa-online, #online {
+    animation: blink-status 1s infinite;
+    color: #00ff00;
+}
+
+#online::after {
+    content: 'Online';
+}
+
+#nav-img {
+    width: 10vh;
+    height: 10vh;
+}
+
+.banner {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -60%);
+}
+
+#banner-text {
+    font-size: 3.5rem;
+    color: white;
+}
+
+#banner-slogan, #blinking-cursor {
+    display: inline;
+}
+
+#banner-slogan {
+    font-size: 1.5rem;
+    color: #43b581;
+}
+
+#blinking-cursor {
+    border: 0.1px solid #f04747;
+    border-width: 0.5px;
+    animation: blink-cursor 1s infinite;
+    position: relative;
+    bottom: 2.3px;
+    left: 2px;
+}
+
+#nav-construction, #hammer {
+    color: #faa61a;
+}
+
+#hammer {
+    animation: rotate-hammer 1s infinite ease-in-out;
+}
+
+.none {
+    display: none;
+}
+
+.nav-gear {
+    transform: rotate(0deg);
+}
+.nav-gear:hover {
+    transform: rotate(45deg);
+}
+
+@keyframes rotate-hammer {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes blink-status {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes blink-cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1091px) {
+    #banner-text {
+        font-size: 2rem;
+    }
+    #banner-slogan {
+        font-size: 1rem;
+    }
+    #nav-text {
+        font-size: 1rem;
+    }
+    .nav-item {
+        display: inline;
+        padding-inline: 5px;
+    }
+}
+
+@media (max-width: 831px) {
+    #banner-text {
+        color: red;
+        font-size: 1.5rem;
+    }
+    #banner-slogan {
+        font-size: 0.8rem;
+    }
+    #nav-text {
+        font-size: 0.8rem;
+    }
+    .nav-item {
+        display: inline;
+        padding-inline: 2.5px;
+    }
+}
